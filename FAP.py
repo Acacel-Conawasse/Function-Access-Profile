@@ -37,14 +37,14 @@ def press_tab_and_decide(setting, tabs_count):
 
 
 #Everyone (Expand) Mouse Click (-1664,69)
-move_and_click(-1664, 69)
-time.sleep(1)
-#Everyone (Mouse Click in front (-1631,66), Click on two tabs, and then click up + down (Disallow All))
-move_and_click(-1631, 66)
-time.sleep(1)
-pyautogui.press(['tab', 'tab'])
-time.sleep(2)
-pyautogui.hotkey('up', 'down')
+#move_and_click(-1664, 69)
+#time.sleep(1)
+##Everyone (Mouse Click in front (-1631,66), Click on two tabs, and then click up + down (Disallow All))
+#move_and_click(-1631, 66)
+#time.sleep(1)
+#pyautogui.press(['tab', 'tab'])
+#time.sleep(2)
+#pyautogui.hotkey('up', 'down')
 #Home Page Personalization (click three tabs, if allowed click up arrow key + tab, else click down)
 #pyautogui.press(['tab', 'tab', 'tab'])
 
@@ -56,10 +56,24 @@ with open(file_path, 'r') as file:
         for setting, value in row.items():
             
             # Perform the action based on the setting value
-            if setting == "Home Page Personalization":
-                press_tab_and_decide(value, 3)
-            if setting == "Wages":
-                pyautogui.hotkey(['tab', 'tab', 'tab', 'tab', 'tab'])
+            if setting == "Everyone":
+                #Everyone (Expand) Mouse Click (-1664,69)
+                move_and_click(-1664, 69)
+                time.sleep(1)
+                #Everyone (Mouse Click in front (-1631,66), Click on two tabs, and then click up + down (Disallow All))
+                move_and_click(-1631, 66)
+                time.sleep(1)
+                pyautogui.press(['tab', 'tab'])
+                time.sleep(2)
+                pyautogui.hotkey('up', 'down')
+                time.sleep(1)
+                pyautogui.press(['tab'])
+
+            if setting == "Open an online form":
+                press_tab_and_decide(value,9)
+            
+            if setting == "Show Person Number":
+                press_tab_and_decide(value,2)
 
             # You can add similar conditions for other settings here
             # ...
