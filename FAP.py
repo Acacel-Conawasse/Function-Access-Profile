@@ -3,7 +3,7 @@ import time
 import csv 
 
 
-file_path = settings.txt
+file_path = "settings.txt"
 pyautogui.FAILSAFE = True  # Enable failsafe by moving the mouse to the upper left corner
 
 #Functions 
