@@ -1,34 +1,84 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+import pyautogui
+import csv
+import time
 
-# Set the path to the GeckoDriver executable
-geckodriver_path = 'C:/Users/omalomo3/Downloads/geckodriver-v0.34.0-win32/geckodriver.exe'
+# Function to perform mouse click at specified coordinates
+def mouse_click(x, y):
+    pyautogui.click(x, y)
 
-# Specify the path to your Firefox binary if it's not in the default location
-firefox_binary_path = 'C:/Program Files/Mozilla Firefox/firefox.exe'
+# Function to automate settings based on a row from the settings.txt
+def automate_settings(row, initial_x, initial_y):
+    # Reset to the starting point for each setting
+    mouse_click(initial_x, initial_y)
+    
+    # Process each setting based on its index
+    for index, setting in enumerate(row):
+        print(f"Processing setting at index {index}: {setting}")  # Print the current setting being processed
 
-# Create Firefox Options
-firefox_options = Options()
-firefox_options.binary_location = firefox_binary_path
+        # Manager - Department Manager
+        if index == 0:
+            if setting == '':
+                mouse_click(initial_x, initial_y)
+                pyautogui.press('tab', presses=20, interval=0.1)
+                pyautogui.press('enter')
+                mouse_click(initial_x, initial_y)  # Reset click position if needed
+                pyautogui.press('tab', presses=21, interval=0.1)
+                pyautogui.press('up')  # Assuming <up> to disallow
+                pass
+        # Dataviews - Group Edits
+        elif index == 1:
+            if setting == '':
+                mouse_click(initial_x, initial_y)
+                pyautogui.press('tab', presses=23, interval=0.1)
+                pyautogui.press('enter')
+                pass
 
-# Create a Service object to pass to the Firefox driver
-service = Service(executable_path=geckodriver_path)
+        # Group approval of timecards
+        elif index == 2:
+            if setting == '':
+                mouse_click(initial_x, initial_y)
+                pyautogui.press('tab', presses=38, interval=0.1)
+                pyautogui.press('enter')
+                mouse_click(initial_x, initial_y)  # Reset click position if needed
+                pyautogui.press('tab', presses=41, interval=0.1)
+                pass
+        # Add
+        elif index == 3:
+            if setting == 'allowed':
+                pyautogui.press('up')
+                mouse_click(initial_x, initial_y)  # Reset click position if needed
+                pyautogui.press('tab', presses=43, interval=0.1)
+                pass
+            elif setting == 'disallowed':
+                pyautogui.press('down')
+                pyautogui.press('tab', presses=2, interval=0.1)
+                pass
+            
+        # Remove
+        elif index == 4:
+            if setting == 'allowed':
+                pyautogui.press('up')
+                mouse_click(initial_x, initial_y)  # Reset click position if needed
+                pyautogui.press('tab', presses=45, interval=0.1)
+                pass
+            elif setting == 'disallowed':
+                pyautogui.press('down')
+                pyautogui.press('tab', presses=2, interval=0.1)
+                pass
+        # Implement additional logic for other columns based on the pattern above
+        
+        # Delay to avoid sending inputs too quickly
+        time.sleep(0.5)
 
-# Initialize the WebDriver for Firefox with the Service object and Firefox Options
-driver = webdriver.Firefox(service=service, options=firefox_options)
+# Read settings.txt and apply settings
+def main():
+    initial_x, initial_y = 3530, 145  # Update these values to the initial click position
+    with open('settings.txt', mode='r') as file:
+        reader = csv.reader(file)
+        headers = next(reader)  # Skip the header row
+        for row in reader:
+            automate_settings(row, initial_x, initial_y)
+            time.sleep(3)  # Delay between processing each row
 
-# Navigate to your webpage
-driver.get('https://jhmi-uat.npr.mykronos.com/capp?tenantId=jhmi_nonprd_01#/setuptools?path=%2Fwfc%2Fapplications%2Fwsaaccessprofiles%2Ffaps.do&method=doPopulate&helpId=ApplicationSetup&pageId=300')
-
-# Wait up to 10 seconds for the "ESS Posted" link to be clickable
-wait = WebDriverWait(driver, 60)
-ess_posted_link = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='ESS Posted']")))
-
-# Click on the "ESS Posted" link
-ess_posted_link.click()
-
-# Continue with your automation tasks...
+if __name__ == "__main__":
+    main()
