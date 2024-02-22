@@ -3,9 +3,9 @@ import time
 import csv 
 
 
-file_path = "C:/Users/kwiggin7/Documents/Automation/Function_Access_Profiles/Function-Access-Profile/settings.txt"
+file_path = "settings.txt"
 pyautogui.FAILSAFE = True  # Enable failsafe by moving the mouse to the upper left corner
-
+    
 #Functions 
 def move_and_click(x, y, delay=0.7):
     """
