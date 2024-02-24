@@ -1,58 +1,38 @@
-from tkinter import Tk, Label, Button, LabelFrame
+import pyautogui
+from tkinter import Tk, Label, Button, LabelFrame, Entry
 from threading import Thread
-from pynput.keyboard import Listener, Key
 
 class GlobalTabCounter:
     def __init__(self, master):
         self.master = master
-        self.tab_count = 0
-        self.count_history = []
+        self.required_tabs = 0  # Number of Tab presses required
         self.setup_gui()
-        
-        # Start listening to keyboard events in a separate thread
-        listener_thread = Thread(target=self.start_listening, daemon=True)
-        listener_thread.start()
 
     def setup_gui(self):
-        self.master.title("Global Tab Counter")
+        self.master.title("Tab Automation Tool")
         
-        self.label = Label(self.master, text="Current Tab Count: 0")
-        self.label.pack(pady=10)
+        self.required_tabs_label = Label(self.master, text="Enter number of Tab key presses:")
+        self.required_tabs_label.pack(pady=(10, 0))
         
-        self.reset_button = Button(self.master, text="Reset and Save Count", command=self.reset_and_save_count)
-        self.reset_button.pack(pady=5)
+        self.required_tabs_entry = Entry(self.master)
+        self.required_tabs_entry.pack(pady=(0, 10))
         
-        self.history_frame = LabelFrame(self.master, text="Count History")
-        self.history_frame.pack(fill='both', expand='yes', padx=10, pady=5)
-        
-    def start_listening(self):
-        with Listener(on_press=self.on_press) as listener:
-            listener.join()
-    
-    def on_press(self, key):
-        if key == Key.tab:
-            self.tab_count += 1
-            self.update_label()
+        self.start_button = Button(self.master, text="Start", command=self.perform_tab_presses)
+        self.start_button.pack(pady=5)
 
-    def update_label(self):
-        # Update GUI elements from the main thread
-        self.label.config(text=f"Current Tab Count: {self.tab_count}")
-        
-    def reset_and_save_count(self):
-        if self.tab_count > 0:
-            self.count_history.append(self.tab_count)
-            self.tab_count = 0
-            self.update_label()
-            self.update_history()
+    def perform_tab_presses(self):
+        try:
+            self.required_tabs = int(self.required_tabs_entry.get())
+            initial_x, initial_y = -1166, -215  # Set to your specific initial click position
+            pyautogui.click(initial_x, initial_y)  # Perform the initial click
 
-    def update_history(self):
-        # Clear current history
-        for widget in self.history_frame.winfo_children():
-            widget.destroy()
+            # Simulate the required number of Tab key presses
+            for _ in range(self.required_tabs):
+                pyautogui.press('tab')
+                pyautogui.sleep(0.0000001)
 
-        # Update history display
-        for idx, count in enumerate(self.count_history, start=1):
-            Label(self.history_frame, text=f"Count {idx}: {count}").pack(anchor="w")
+        except ValueError:
+            print("Please enter a valid integer for the number of Tab presses.")
 
 if __name__ == "__main__":
     root = Tk()
