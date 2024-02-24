@@ -533,7 +533,7 @@ def automate_settings(row, initial_x, initial_y):
             
         # Manager access to Actions list
         elif  index == 50:
-            press_tab_and_decide(setting,48)
+            press_tab_and_decide(setting,50)
         
         # Forecasting (skip)
         # Forecast Planner (skip)
@@ -762,7 +762,8 @@ def automate_settings(row, initial_x, initial_y):
         elif  index == 78:
             press_tab_and_decide(setting,73)
             # End of dept Manager (close)
-            
+            tab_and_open(20)
+            time.sleep(1)
             
 def main():
     
