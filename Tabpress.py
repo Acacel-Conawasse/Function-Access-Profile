@@ -27,7 +27,7 @@ def execute_actions_with_mouse_clicks(coordinates, sequences):
         elif action == 'up':
             pyautogui.hotkey(['up', 'down'])
             time.sleep(1)
-        elif action == 'tab':  # Assum          ing 'tab' means an additional tab press
+        elif action == 'tab':  # Assuming 'tab' means an additional tab press
             pyautogui.press(['tab'])
 
         time.sleep(1)  # A short delay after the action before starting the next sequence
