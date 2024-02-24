@@ -31,11 +31,13 @@ def tabto(count,initial_x=1291, initial_y=100):
         
 # Function to press tab the required number of times and then either up+tab or down based on the setting
 def press_tab_and_decide(setting, tabs_count):
+    print(f"{setting}: ")
     # Press tab the required number of times
     tabto(tabs_count)
     # Decide whether to press 'up' and 'tab' or just 'down'
     if setting == 'allowed' or setting == "All But Self":
         pyautogui.press('up')
+        
         time.sleep(2)
     #elif setting == 'All':
     #    pyautogui.press('a')
@@ -47,6 +49,7 @@ def press_tab_and_decide(setting, tabs_count):
 
 
 def tab_and_open(count):
+    print(f"expand")
     tabto(count)
     pyautogui.press('enter')
     time.sleep(1)
@@ -58,7 +61,7 @@ def automate_settings(row, initial_x, initial_y):
     
     # Assuming the first row is the header with setting names
     for index, setting in enumerate(row):
-        print(f"Processing setting at index {index}: {setting}")  # Print the current setting being processed
+        print(f"Processing setting at index {index}: ")#{setting}") #  # Print the current setting being processed
         
         
         # Employee
@@ -443,6 +446,10 @@ def automate_settings(row, initial_x, initial_y):
         elif  index == 35:    
             tab_and_open(79)
             time.sleep(1)
+            
+            # Sleeping for testing
+            time.sleep(10)
+            
         
         # Rule Analysis Tool Report in Timecard editor
         elif  index == 36:
@@ -754,10 +761,13 @@ def automate_settings(row, initial_x, initial_y):
         # Employee Search
         elif  index == 78:
             press_tab_and_decide(setting,73)
-        
+            # End of dept Manager (close)
             
             
 def main():
+    
+    # Sleeping for testing
+    time.sleep(10)
     initial_x, initial_y = 2289, 134  # Update these values to the initial click position
     with open(file_path, mode='r') as file:
         reader = csv.reader(file)
