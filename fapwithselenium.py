@@ -9,8 +9,8 @@ def mouse_click(x, y):
 # Function to automate settings based on a row from the settings.txt
 def automate_settings(row, initial_x, initial_y):
     # Reset to the starting point for each setting
-    mouse_click(initial_x, initial_y)
     
+    mouse_click(initial_x, initial_y)
     # Process each setting based on its index
     for index, setting in enumerate(row):
         print(f"Processing setting at index {index}: {setting}")  # Print the current setting being processed
@@ -580,10 +580,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=63, interval=0.07)
                 pyautogui.press('enter')
                 pass    #Close
-
-
-
-
+            
         #Workload Planner 76
         elif index == 54:
             if setting == '':
@@ -594,6 +591,15 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=79, interval=0.07)
                 pass    #Open
         #Budget Pattern
+        elif index == 55:
+            if setting == 'allowed':
+                pyautogui.press('up')
+                mouse_click(initial_x, initial_y)  # Reset click position 
+                pyautogui.press('tab', presses=81, interval=0.07)
+                pass
+            elif setting == 'disallowed':
+                pyautogui.press('tab', presses=2, interval=0.07)
+                pass  #Regular
         #Budget Calendar
         #Plan Pattern
         #Plan Calendar
