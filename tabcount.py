@@ -23,7 +23,7 @@ class GlobalTabCounter:
     def perform_tab_presses(self):
         try:
             self.required_tabs = int(self.required_tabs_entry.get())
-            initial_x, initial_y = -1166, -215  # Set to your specific initial click position
+            initial_x, initial_y = 3216, 143  # Set to your specific initial click position
             pyautogui.click(initial_x, initial_y)  # Perform the initial click
 
             # Simulate the required number of Tab key presses

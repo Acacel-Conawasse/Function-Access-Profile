@@ -21,7 +21,7 @@ def automate_settings(row, initial_x, initial_y):
         ####################################################
         ####################################################
         ####################################################
-        #Everyone 
+        """#Everyone 
         if index == 0:
             if setting == 'Null':
                 mouse_click(initial_x, initial_y)
@@ -59,7 +59,6 @@ def automate_settings(row, initial_x, initial_y):
 #-------------------------------------------------------------------------------------------------------------------
 #Employee 
         elif index == 3:
-             if setting == 'Null':
                 #Employee  Mouse Click (-1664,69)
                 tab_and_open(17)
                 time.sleep(1)
@@ -69,26 +68,23 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         # Time Stamp for Employees
         elif  index == 4:
-            if setting == 'Null':
-                #Time Stamp for Employees  
-                tab_and_open(20)
-                time.sleep(1)
-                pass
+            #Time Stamp for Employees  
+            tab_and_open(20)
+            time.sleep(1)
+            pass
         #Cancel meal deductions in Time Stamp     
         elif  index == 5:
-            if setting == 'Null':
-                press_tab_and_decide(setting,23)
-                # end of Time Stamp for Employees. Closing group    
-                tab_and_open(20)
-                time.sleep(1)
-                pass
+            press_tab_and_decide(setting,23)
+            # end of Time Stamp for Employees. Closing group    
+            tab_and_open(20)
+            time.sleep(1)
+            pass
         # "Calendar"
         elif  index == 6:
-            if setting == 'Null':
-                # Calendar  
-                tab_and_open(23)
-                time.sleep(1)
-                pass
+            # Calendar  
+            tab_and_open(23)
+            time.sleep(1)
+            pass
         # Calendar views for employees     
         elif  index == 7:
             press_tab_and_decide(setting,26)       
@@ -216,7 +212,7 @@ def automate_settings(row, initial_x, initial_y):
             press_tab_and_decide(setting,81) 
             #end of Employee (close)
             tab_and_open(17)
-            time.sleep(1)    
+            time.sleep(1)  """  
 #-------------------------------------------------------------------------------------------------------------------
 ####################################################
 ####################################################
@@ -224,14 +220,16 @@ def automate_settings(row, initial_x, initial_y):
 ####################################################
 ####################################################
         # Manager - Department Manager
-        elif index == 39:
+        if index == 39:
             if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=20, interval=0.07)
                 pyautogui.press('enter')
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=21, interval=0.07)
-                pyautogui.press('up')  # Assuming <up> to disallow
+                pyautogui.press('d') 
+                time.sleep(1)
                 pass
         # Dataviews - Group Edits
         elif index == 40:
@@ -239,6 +237,7 @@ def automate_settings(row, initial_x, initial_y):
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=23, interval=0.07)
                 pyautogui.press('enter')
+                time.sleep(1)
                 pass
         # Group approval of timecards
         elif index == 41:
@@ -246,112 +245,126 @@ def automate_settings(row, initial_x, initial_y):
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=38, interval=0.07)
                 pyautogui.press('enter')
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=41, interval=0.07)
                 pass
         # Add
         elif index == 42:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=43, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
+                time.sleep(1)
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass       
         # Remove
         elif index == 43:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
+                time.sleep(1)
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=45, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
+                time.sleep(1)
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
         #Remove All
         elif index == 44:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=47, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
+                time.sleep(1)
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
 		#Edit data after non account approval by self
         elif index == 45:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=49, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
+                time.sleep(1)
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
 		#Edit data after non account approval by others
         elif index == 46:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=51, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
+                time.sleep(1)
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
 		#Comments in Dataviews
         elif index == 47:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
+                time.sleep(1)
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=53, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
+                time.sleep(1)
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
 		#Notes for comments in Dataviews
         elif index == 48:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=55, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
 		#Filter by Selected Job Seniority
         elif index == 49:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=59, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
 		#Pay code edits in Dataviews
         elif index == 50:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=61, interval=0.07)
                 pass
             elif setting == 'disallowed':
-                pyautogui.press('down')
+                pyautogui.press('d')
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass
 		#Mark Exceptions as Reviewed
         elif index == 51:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=38, interval=0.07)
                 pyautogui.press('enter')
@@ -373,7 +386,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Start Pay from Schedule
         elif index == 53:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=60, interval=0.07)
                 pass
@@ -383,7 +396,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Stop Pay from Schedule
         elif index == 54:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=62, interval=0.07)
                 pass
@@ -393,7 +406,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Punch edits in Dataviews#
         elif index == 55:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=55, interval=0.07)
                 pyautogui.press('enter')
@@ -415,7 +428,7 @@ def automate_settings(row, initial_x, initial_y):
         #Add        
         elif index == 57:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=65, interval=0.07)
                 pass
@@ -425,7 +438,7 @@ def automate_settings(row, initial_x, initial_y):
         #Remove            
         elif index == 58:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=60, interval=0.07)
                 pyautogui.press('enter')
@@ -447,7 +460,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform labor category transfers
         elif index == 60:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=68, interval=0.07)
                 pass
@@ -457,7 +470,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform cost center transfers
         elif index == 61:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=70, interval=0.07)
                 pass
@@ -467,7 +480,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform work rule transfers
         elif index == 62:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=72, interval=0.07)
                 pass
@@ -477,7 +490,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform job transfers
         elif index == 63:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=84, interval=0.07)
                 pass
@@ -487,7 +500,7 @@ def automate_settings(row, initial_x, initial_y):
         #Start Time on pay code edits
         elif index == 64:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=23, interval=0.07)
                 pyautogui.press('enter')
@@ -509,7 +522,7 @@ def automate_settings(row, initial_x, initial_y):
         #Open Shift Available Notification
         elif index == 66:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=32, interval=0.07)
                 pass
@@ -519,7 +532,7 @@ def automate_settings(row, initial_x, initial_y):
         #Schedule access
         elif index == 67:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=34, interval=0.07)
                 pass
@@ -529,7 +542,7 @@ def automate_settings(row, initial_x, initial_y):
         #Filter Location by Employee Group
         elif index == 68:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=36, interval=0.07)
                 pyautogui.press('enter')
@@ -547,7 +560,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Employment Term View of Schedule
         elif index == 70:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=41, interval=0.07)
                 pass
@@ -557,7 +570,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Employee View of Schedule
         elif index == 71:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=43, interval=0.07)
                 pass
@@ -567,7 +580,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Group View of Schedule
         elif index == 72:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=45, interval=0.07)
                 pass
@@ -577,7 +590,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Job View of Schedule
         elif index == 73:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=47, interval=0.07)
                 pass
@@ -587,7 +600,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Display Location-based Add-on Data when Employee Group Filtering Enabled
         elif index == 74:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=49, interval=0.07)
                 pass
@@ -597,7 +610,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Run reports within Schedule Planner
         elif index == 75:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=51, interval=0.07)
                 pass
@@ -607,7 +620,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Pay Code Comments in Schedules
         elif index == 76:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=53, interval=0.07)
                 pass
@@ -617,7 +630,7 @@ def automate_settings(row, initial_x, initial_y):
 		#Notes for Pay Code Comments in Schedules
         elif index == 77:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=36, interval=0.07)
                 pyautogui.press('enter')
@@ -639,7 +652,7 @@ def automate_settings(row, initial_x, initial_y):
         #Add segment tag
         elif index == 79:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=55, interval=0.07)
                 pass
@@ -649,7 +662,7 @@ def automate_settings(row, initial_x, initial_y):
         #Schedule pay code edits
         elif index == 80:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=61, interval=0.07)
                 pass
@@ -659,7 +672,7 @@ def automate_settings(row, initial_x, initial_y):
         #View audit trails in Schedules
         elif index == 81:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=63, interval=0.07)
                 pass
@@ -669,7 +682,7 @@ def automate_settings(row, initial_x, initial_y):
         #Filter audit trails in Schedules
         elif index == 82:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=50, interval=0.07)
                 pyautogui.press('enter')
@@ -691,7 +704,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform labor category transfers
         elif index == 84:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=68, interval=0.07)
                 pass
@@ -701,7 +714,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform cost center transfers
         elif index == 85:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=70, interval=0.07)
                 pass
@@ -711,7 +724,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform work rule transfers
         elif index == 86:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=72, interval=0.07)
                 pass
@@ -721,7 +734,7 @@ def automate_settings(row, initial_x, initial_y):
         #Perform job transfers
         elif index == 87:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=74, interval=0.07)
                 pass
@@ -731,7 +744,7 @@ def automate_settings(row, initial_x, initial_y):
         #Schedule Shift Comments
         elif index == 88:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=76, interval=0.07)
                 pass
@@ -741,7 +754,7 @@ def automate_settings(row, initial_x, initial_y):
         #Notes for Schedule Shift Comments
         elif index == 89:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=78, interval=0.07)
                 pass
@@ -751,7 +764,7 @@ def automate_settings(row, initial_x, initial_y):
         #Mark Schedule Posted
         elif index == 90:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=84, interval=0.07)
                 pass
@@ -761,7 +774,7 @@ def automate_settings(row, initial_x, initial_y):
         #Mark Schedule Unposted
         elif index == 91:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=86, interval=0.07)
                 pass
@@ -771,7 +784,7 @@ def automate_settings(row, initial_x, initial_y):
         #Availability
         elif index == 92:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=63, interval=0.07)
                 pyautogui.press('enter')
@@ -794,16 +807,16 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 94:
             if setting == 'EDIT & VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=82, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=84, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=3, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=84, interval=0.07)
                 pass  #Regular   
@@ -812,16 +825,16 @@ def automate_settings(row, initial_x, initial_y):
         #Budget Calendar
         elif index == 95:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=85, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=88, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=88, interval=0.07)
                 pass  #Regular   
@@ -830,16 +843,16 @@ def automate_settings(row, initial_x, initial_y):
         #Plan Pattern
         elif index == 96:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=90, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=92, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=2, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=92, interval=0.07)
                 pass  #Regular   
@@ -848,16 +861,16 @@ def automate_settings(row, initial_x, initial_y):
         #Plan Calendar
         elif index == 97:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=93, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=98, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=95, interval=0.07)
                 pass  #Regular   
@@ -866,16 +879,16 @@ def automate_settings(row, initial_x, initial_y):
         #Budget Volume
         elif index == 98:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=96, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=98, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=98, interval=0.07)
                 pass  #Regular   
@@ -884,16 +897,16 @@ def automate_settings(row, initial_x, initial_y):
         #Plan Volume
         elif index == 99:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=99, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=101, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=101, interval=0.07)
                 pass  #Regular   
@@ -902,16 +915,16 @@ def automate_settings(row, initial_x, initial_y):
         #Actual Volume
         elif index == 100:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=102, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=104, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=104, interval=0.07)
                 pass  #Regular   
@@ -920,16 +933,16 @@ def automate_settings(row, initial_x, initial_y):
         #Actual Calendar
         elif index == 101:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=105, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=107, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=107, interval=0.07)
                 pass  #Regular   
@@ -938,7 +951,7 @@ def automate_settings(row, initial_x, initial_y):
         #Generate Workload
         elif index == 102:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=109, interval=0.07)
                 pass
@@ -948,7 +961,7 @@ def automate_settings(row, initial_x, initial_y):
         #Lock Volume
         elif index == 103:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=111, interval=0.07)
                 pass
@@ -958,7 +971,7 @@ def automate_settings(row, initial_x, initial_y):
         #Run Priority Scheduling Engine
         elif index == 104:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=113, interval=0.07)
                 pass
@@ -968,7 +981,7 @@ def automate_settings(row, initial_x, initial_y):
         #Run Schedule Engine
         elif index == 105:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=117, interval=0.07)
                 pass
@@ -978,7 +991,7 @@ def automate_settings(row, initial_x, initial_y):
         #Schedule Day Lock
         elif index == 106:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=122, interval=0.07)
                 pass
@@ -988,16 +1001,16 @@ def automate_settings(row, initial_x, initial_y):
         #Shift Profile Sets
         elif index == 107:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=123, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=127, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=127, interval=0.07)
                 pass  #Regular   
@@ -1006,16 +1019,16 @@ def automate_settings(row, initial_x, initial_y):
         #Shift Profiles
         elif index == 108:
             if setting == 'EDIT & VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=128, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=132, interval=0.07)
                 pass
             elif setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=132, interval=0.07)
                 pass  #Regular   
@@ -1025,7 +1038,7 @@ def automate_settings(row, initial_x, initial_y):
         #Enter Time Off
         elif index == 109:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=138, interval=0.07)
                 pass
@@ -1036,7 +1049,7 @@ def automate_settings(row, initial_x, initial_y):
         #Pay Code Edits using Pattern Day
         elif index == 110:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=146, interval=0.07)
                 pass
@@ -1047,7 +1060,7 @@ def automate_settings(row, initial_x, initial_y):
         #Add to Schedule Group
         elif index == 111:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=148, interval=0.07)
                 pass
@@ -1057,7 +1070,7 @@ def automate_settings(row, initial_x, initial_y):
         #Remove from Schedule Group
         elif index == 112:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=150, interval=0.07)
                 pass
@@ -1067,7 +1080,7 @@ def automate_settings(row, initial_x, initial_y):
         #Edit Group Schedules
         elif index == 113:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=152, interval=0.07)
                 pass
@@ -1077,7 +1090,7 @@ def automate_settings(row, initial_x, initial_y):
         #Lock Shifts
         elif index == 114:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=154, interval=0.07)
                 pass
@@ -1087,7 +1100,7 @@ def automate_settings(row, initial_x, initial_y):
         #Assign Breaks
         elif index == 115:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=156, interval=0.07)
                 pass
@@ -1097,7 +1110,7 @@ def automate_settings(row, initial_x, initial_y):
         #Team Definition Setup
         elif index == 116:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=158, interval=0.07)
                 pass
@@ -1107,7 +1120,7 @@ def automate_settings(row, initial_x, initial_y):
         #Team Definition Setup Extended Access
         elif index == 117:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=162, interval=0.07)
                 pass
@@ -1117,7 +1130,7 @@ def automate_settings(row, initial_x, initial_y):
         #Replace shift
         elif index == 118:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=164, interval=0.07)
                 pass
@@ -1127,7 +1140,7 @@ def automate_settings(row, initial_x, initial_y):
         #Append shift
         elif index == 119:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=166, interval=0.07)
                 pass
@@ -1137,7 +1150,7 @@ def automate_settings(row, initial_x, initial_y):
         #Insert transfer <Two Tabs to Employee visibility period and enter> Not closing any Drops 
         elif index == 120:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=76, interval=0.07)
                 pyautogui.press('enter')
@@ -1159,7 +1172,7 @@ def automate_settings(row, initial_x, initial_y):
         #Request Submission Control
         elif index == 122:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=141, interval=0.07)
                 pass
@@ -1169,7 +1182,7 @@ def automate_settings(row, initial_x, initial_y):
         #Request Period Extended Access
         elif index == 123:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=143, interval=0.07)
                 pass
@@ -1179,7 +1192,7 @@ def automate_settings(row, initial_x, initial_y):
         #Recurrent / Rolling periods
         elif index == 124:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=145, interval=0.07)
                 pass
@@ -1189,7 +1202,7 @@ def automate_settings(row, initial_x, initial_y):
         #Multi-Group options
         elif index == 125:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=147, interval=0.07)
                 pass
@@ -1199,7 +1212,7 @@ def automate_settings(row, initial_x, initial_y):
         #Employee Priority option
         elif index == 126:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=149, interval=0.07)
                 pass
@@ -1209,7 +1222,7 @@ def automate_settings(row, initial_x, initial_y):
         #Personal Hyperfinds for Employee Query
         elif index == 127:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=151, interval=0.07)
                 pass
@@ -1219,7 +1232,7 @@ def automate_settings(row, initial_x, initial_y):
         #Visibility Period Actions
         elif index == 128:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=153, interval=0.07)
                 pass
@@ -1229,7 +1242,7 @@ def automate_settings(row, initial_x, initial_y):
         #Call Log
         elif index == 129:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=155, interval=0.07)
                 pass
@@ -1239,7 +1252,7 @@ def automate_settings(row, initial_x, initial_y):
         #Call List
         elif index == 130:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=157, interval=0.07)
                 pass
@@ -1249,7 +1262,7 @@ def automate_settings(row, initial_x, initial_y):
         #Group Edit Results
         elif index == 131:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=159, interval=0.07)
                 pass
@@ -1259,7 +1272,7 @@ def automate_settings(row, initial_x, initial_y):
         #Calendar views for Managers <Closing Scheduling with initial click and 26 Tabs> 
         elif index == 132:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=26, interval=0.07)
                 pyautogui.press('enter')
@@ -1497,7 +1510,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
         # Apply Rules
         elif  index == 189:
@@ -1506,7 +1519,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
         # Attendance Balance Resets and Adjustments
         elif  index == 190:
@@ -1517,7 +1530,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
             # Change field two    
             tabto(69)
@@ -1525,7 +1538,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
         # Attendance Events
         elif  index == 191:
@@ -1536,7 +1549,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
             # Change field two    
             tabto(72)
@@ -1544,7 +1557,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
             # Change field three    
             tabto(73)
@@ -1552,7 +1565,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
         # Refine Filters (skip)
         # Access to Attendance Detail Page and Calendar
@@ -1607,7 +1620,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)        
         # View documents
         elif  index == 204:
@@ -1616,7 +1629,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
             # End of Leave Case Documents (close)
             tab_and_open(85)
@@ -1628,7 +1641,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('a')
                 time.sleep(2)
             elif setting == 'All But Self':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 time.sleep(2)
         # Leave Case Notes
         elif  index == 206:
@@ -1685,7 +1698,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('enter')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=24, interval=0.07)
-                pyautogui.press('up')  # Assuming <up> to disallow
+                pyautogui.press('a')  # Assuming <up> to disallow
                 pass
         #Hyperfind
         elif index == 213:
@@ -1702,12 +1715,12 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('enter')        
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=32, interval=0.07)
-                pyautogui.press('up')  # Assuming <up> to disallow
+                pyautogui.press('a')  # Assuming <up> to disallow
                 pass
         #Display Business Structure & Job Information in Hyperfind
         elif index == 215:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=34, interval=0.07)
                 pass
@@ -1717,7 +1730,7 @@ def automate_settings(row, initial_x, initial_y):
         #General Information category
         elif index == 216:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=36, interval=0.07)
                 pass
@@ -1727,7 +1740,7 @@ def automate_settings(row, initial_x, initial_y):
         #Timekeeper category
         elif index == 217:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=38, interval=0.07)
                 pass
@@ -1737,7 +1750,7 @@ def automate_settings(row, initial_x, initial_y):
         #Time Management category
         elif index == 218:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=42, interval=0.07)
                 pass
@@ -1747,7 +1760,7 @@ def automate_settings(row, initial_x, initial_y):
         #Scheduler category
         elif index == 219:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=44, interval=0.07)
                 pass
@@ -1757,7 +1770,7 @@ def automate_settings(row, initial_x, initial_y):
         #Advanced Scheduler category
         elif index == 220:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=50, interval=0.07)
                 pass
@@ -1767,7 +1780,7 @@ def automate_settings(row, initial_x, initial_y):
         #User Information category
         elif index == 221:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=52, interval=0.07)
                 pass
@@ -1777,7 +1790,7 @@ def automate_settings(row, initial_x, initial_y):
         #Role - Timekeeper category
         elif index == 222:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=60, interval=0.07)
                 pass
@@ -1787,7 +1800,7 @@ def automate_settings(row, initial_x, initial_y):
         #Attendance Category
         elif index == 223:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=29, interval=0.07)
                 pyautogui.press('enter')
@@ -1805,12 +1818,12 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('enter')        
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=35, interval=0.07)
-                pyautogui.press('up')  # Assuming <up> to disallow
+                pyautogui.press('a')  # Assuming <up> to disallow
                 pass
         #Assemble Query tab
         elif index == 225:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=32, interval=0.07)
                 pyautogui.press('enter')
@@ -1828,12 +1841,12 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('enter')        
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=38, interval=0.07)
-                pyautogui.press('up')  # Assuming <up> to disallow
+                pyautogui.press('a')  # Assuming <up> to disallow
                 pass
         #Ad hoc queries
         elif index == 227:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=40, interval=0.07)
                 pass
@@ -1843,10 +1856,10 @@ def automate_settings(row, initial_x, initial_y):
         #Personal queries
         elif index == 228:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=41, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position
                 pyautogui.press('tab', presses=46, interval=0.07)
                 pass
@@ -1856,7 +1869,7 @@ def automate_settings(row, initial_x, initial_y):
         #Query Manager
         elif index == 229:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=26, interval=0.07)
                 pyautogui.press('enter')
@@ -1878,7 +1891,7 @@ def automate_settings(row, initial_x, initial_y):
         #Person
         elif index == 231:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=33, interval=0.07)
                 pyautogui.write('All')
@@ -1890,10 +1903,10 @@ def automate_settings(row, initial_x, initial_y):
         #License view
         elif index == 232:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=39, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 pyautogui.press('tab', presses=41, interval=0.07)
                 pass
             elif setting == 'disallowed':
@@ -1919,7 +1932,7 @@ def automate_settings(row, initial_x, initial_y):
         #Person name
         elif index == 235:
             if setting == 'VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=52, interval=0.07)
                 pass
@@ -1929,7 +1942,7 @@ def automate_settings(row, initial_x, initial_y):
         #Person ID
         elif index == 236:
             if setting == 'VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=54, interval=0.07)
                 pass
@@ -1940,7 +1953,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 237:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=57, interval=0.07)
                 pass
@@ -1950,7 +1963,7 @@ def automate_settings(row, initial_x, initial_y):
         #Employment status
         elif index == 238:
             if setting == 'VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=62, interval=0.07)
                 pass
@@ -1970,7 +1983,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 240:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=81, interval=0.07)
                 pass
@@ -1981,7 +1994,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 241:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=84, interval=0.07)
                 pass
@@ -1992,7 +2005,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 242:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=87, interval=0.07)
                 pass
@@ -2003,7 +2016,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 243:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=62, interval=0.07)
                 pyautogui.press('enter')
@@ -2026,7 +2039,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 245:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=82, interval=0.07)
                 pyautogui.press('enter')
@@ -2039,7 +2052,7 @@ def automate_settings(row, initial_x, initial_y):
         #Manager ID Column
         elif index == 246:
             if setting == 'VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=84, interval=0.07)
                 pass
@@ -2050,7 +2063,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 247:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=44, interval=0.07)
                 pyautogui.press('enter')
@@ -2072,7 +2085,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 249:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=56, interval=0.07)
                 pass
@@ -2083,7 +2096,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 250:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=62, interval=0.07)
                 pass
@@ -2094,7 +2107,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 251:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=65, interval=0.07)
                 pass
@@ -2105,7 +2118,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 252:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=41, interval=0.07)
                 pyautogui.press('enter')
@@ -2133,7 +2146,7 @@ def automate_settings(row, initial_x, initial_y):
         #Percent Allocation Assignment
         elif index == 255:
             if setting == 'VIEW-Allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=68, interval=0.07)
                 pass
@@ -2143,7 +2156,7 @@ def automate_settings(row, initial_x, initial_y):
         #Employment Terms view
         elif index == 256:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=47, interval=0.07)
                 pyautogui.press('enter')
@@ -2166,7 +2179,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 258:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=1, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pass
             elif setting == 'disallowed':
@@ -2185,7 +2198,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 260:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=3, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=67, interval=0.07)
                 pass
@@ -2195,16 +2208,16 @@ def automate_settings(row, initial_x, initial_y):
         #Certifications on a person
         elif index == 261:
             if setting == 'allowed':
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position
                 pyautogui.press('tab', presses=68, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position
                 pyautogui.press('tab', presses=69, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=70, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=29, interval=0.07)
                 pyautogui.press('enter')
@@ -2257,7 +2270,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 266:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=3, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=74, interval=0.07)
                 pass
@@ -2268,7 +2281,7 @@ def automate_settings(row, initial_x, initial_y):
         elif index == 267:
             if setting == 'VIEW-Allowed':
                 pyautogui.press('tab', presses=3, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=66, interval=0.07)
                 pyautogui.press('enter')
@@ -2282,13 +2295,13 @@ def automate_settings(row, initial_x, initial_y):
             if setting == 'EDIT & VIEW-Allowed':
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=84, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 #
                 #
                 #Quuestioni in Regards to the schedule template config only Edit option no view (Program works by- enabling only the edit and disallowing the add and delete options)
                 #pyautogui.press('tab', presses=86, interval=0.07)
-                #pyautogui.press('up')
+                #pyautogui.press('a')
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=23, interval=0.07)
                 pyautogui.press('enter')
@@ -2303,11 +2316,11 @@ def automate_settings(row, initial_x, initial_y):
             if setting == 'allowed':
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=27, interval=0.07)
-                pyautogui.press('up')
+                pyautogui.press('a')
                 pass
             elif setting == 'disallowed':
                 pyautogui.press('tab', presses=27, interval=0.07)
-                pyautogui.press('down')
+                pyautogui.press('d')
                 pass  #Regular
         
         
@@ -2340,7 +2353,7 @@ def move_and_click(x, y, delay=0.7):
 def mouse_click(x, y):
     pyautogui.click(x, y)    
 
-def tabto(count,initial_x=1291, initial_y=100):
+def tabto(count,initial_x=3216, initial_y=143):
     mouse_click(initial_x, initial_y)
     pyautogui.press('tab', presses=count, interval=0.07)
                 
@@ -2351,14 +2364,14 @@ def press_tab_and_decide(setting, tabs_count):
     tabto(tabs_count)
     # Decide whether to press 'up' and 'tab' or just 'down'
     if setting == 'allowed' or setting == "All But Self":
-        pyautogui.press('up')
+        pyautogui.press('a')
         
         time.sleep(2)
     #elif setting == 'All':
     #    pyautogui.press('a')
     #    time.sleep(2)
     else:
-        pyautogui.press('down')
+        pyautogui.press('d')
     time.sleep(0.7)
 
 def tab_and_open(count):
@@ -2370,7 +2383,7 @@ def tab_and_open(count):
 
 # Read settings.txt and apply settings
 def main():
-    initial_x, initial_y = -1166, -215  # Update these values to the initial click position
+    initial_x, initial_y = 3216, 146  # Update these values to the initial click position
     with open('settings.txt', mode='r') as file:
         reader = csv.reader(file)
         headers = next(reader)  # Skip the header row
