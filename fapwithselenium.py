@@ -23,7 +23,7 @@ def automate_settings(row, initial_x, initial_y):
         ####################################################
         #Everyone 
         if index == 0:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=14, interval=0.07)
                 pyautogui.press('enter')
@@ -59,7 +59,7 @@ def automate_settings(row, initial_x, initial_y):
 #-------------------------------------------------------------------------------------------------------------------
 #Employee 
         elif index == 3:
-             if setting == '':
+             if setting == 'Null':
                 #Employee  Mouse Click (-1664,69)
                 tab_and_open(17)
                 time.sleep(1)
@@ -69,14 +69,14 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         # Time Stamp for Employees
         elif  index == 4:
-            if setting == '':
+            if setting == 'Null':
                 #Time Stamp for Employees  
                 tab_and_open(20)
                 time.sleep(1)
                 pass
         #Cancel meal deductions in Time Stamp     
         elif  index == 5:
-            if setting == '':
+            if setting == 'Null':
                 press_tab_and_decide(setting,23)
                 # end of Time Stamp for Employees. Closing group    
                 tab_and_open(20)
@@ -84,7 +84,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass
         # "Calendar"
         elif  index == 6:
-            if setting == '':
+            if setting == 'Null':
                 # Calendar  
                 tab_and_open(23)
                 time.sleep(1)
@@ -225,7 +225,7 @@ def automate_settings(row, initial_x, initial_y):
 ####################################################
         # Manager - Department Manager
         elif index == 39:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=20, interval=0.07)
                 pyautogui.press('enter')
@@ -235,14 +235,14 @@ def automate_settings(row, initial_x, initial_y):
                 pass
         # Dataviews - Group Edits
         elif index == 40:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=23, interval=0.07)
                 pyautogui.press('enter')
                 pass
         # Group approval of timecards
         elif index == 41:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=38, interval=0.07)
                 pyautogui.press('enter')
@@ -363,7 +363,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass
         #Pay from Schedule in Dataviews
         elif index == 52:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=55, interval=0.07)
                 pyautogui.press('enter')
@@ -405,7 +405,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass 
         #Sign-off in Dataviews        
         elif index == 56:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=60, interval=0.07)
                 pyautogui.press('enter')
@@ -437,7 +437,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         #Transfers in Dataviews
         elif index == 59:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=63, interval=0.07)
                 pyautogui.press('enter')
@@ -499,7 +499,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         #Scheduling
         elif index == 65:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=26, interval=0.07)
                 pyautogui.press('enter')
@@ -540,7 +540,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass
         #Schedule Views
         elif index == 69:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=39, interval=0.07)
                 pass    #Open   
@@ -629,7 +629,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass   
         #Schedule Quick Actions 50 tabs 
         elif index == 78:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=50, interval=0.07)
                 pyautogui.press('enter')
@@ -681,7 +681,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close 
         #Transfers in Schedules
         elif index == 83:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=63, interval=0.07)
                 pyautogui.press('enter')
@@ -783,7 +783,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         #Workload Planner 76
         elif index == 93:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=76, interval=0.07)
                 pyautogui.press('enter')
@@ -956,7 +956,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Run Priority Scheduling Engine
-        elif index == 65:
+        elif index == 104:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -966,7 +966,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Run Schedule Engine
-        elif index == 104:
+        elif index == 105:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -976,7 +976,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=4, interval=0.07)
                 pass  #Regular
         #Schedule Day Lock
-        elif index == 105:
+        elif index == 106:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -986,7 +986,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=5, interval=0.07)
                 pass  #Regular 
         #Shift Profile Sets
-        elif index == 106:
+        elif index == 107:
             if setting == 'EDIT & VIEW-Allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1004,7 +1004,7 @@ def automate_settings(row, initial_x, initial_y):
             elif setting == 'disallowed':
                 pyautogui.press('tab', presses=3, interval=0.07)
         #Shift Profiles
-        elif index == 107:
+        elif index == 108:
             if setting == 'EDIT & VIEW-Allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1023,7 +1023,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=4, interval=0.07)
             #4 Tabs to Enter Time Off     
         #Enter Time Off
-        elif index == 108:
+        elif index == 109:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1034,7 +1034,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Regular
             #6 Tabs to Pay Code Edits using Pattern Day
         #Pay Code Edits using Pattern Day
-        elif index == 109:
+        elif index == 110:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1045,7 +1045,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Regular
             #8 Tabs to Add to schedule Group 
         #Add to Schedule Group
-        elif index == 110:
+        elif index == 111:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1055,7 +1055,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Remove from Schedule Group
-        elif index == 111:
+        elif index == 112:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1065,7 +1065,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular    
         #Edit Group Schedules
-        elif index == 112:
+        elif index == 113:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1075,7 +1075,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular    
         #Lock Shifts
-        elif index == 113:
+        elif index == 114:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1085,7 +1085,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular     
         #Assign Breaks
-        elif index == 114:
+        elif index == 115:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1095,7 +1095,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular 
         #Team Definition Setup
-        elif index == 115:
+        elif index == 116:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1105,7 +1105,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular 
         #Team Definition Setup Extended Access
-        elif index == 116:
+        elif index == 117:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1115,7 +1115,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular 
         #Replace shift
-        elif index == 117:
+        elif index == 118:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1125,7 +1125,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular     
         #Append shift
-        elif index == 118:
+        elif index == 119:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1135,7 +1135,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Insert transfer <Two Tabs to Employee visibility period and enter> Not closing any Drops 
-        elif index == 119:
+        elif index == 120:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1148,8 +1148,8 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('enter')
                 pass    #Close
         #Employee Visibility Periods
-        elif index == 120:
-            if setting == '':
+        elif index == 121:
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=136, interval=0.07)
                 pyautogui.press('enter')
@@ -1157,7 +1157,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=139, interval=0.07)
                 pass    #Open    
         #Request Submission Control
-        elif index == 121:
+        elif index == 122:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1167,7 +1167,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Request Period Extended Access
-        elif index == 122:
+        elif index == 123:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1177,7 +1177,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular    
         #Recurrent / Rolling periods
-        elif index == 123:
+        elif index == 124:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1187,7 +1187,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Multi-Group options
-        elif index == 124:
+        elif index == 125:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1197,7 +1197,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Employee Priority option
-        elif index == 125:
+        elif index == 126:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1207,7 +1207,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Personal Hyperfinds for Employee Query
-        elif index == 126:
+        elif index == 127:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1217,7 +1217,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Visibility Period Actions
-        elif index == 127:
+        elif index == 128:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1227,7 +1227,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Call Log
-        elif index == 128:
+        elif index == 129:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1237,7 +1237,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Call List
-        elif index == 129:
+        elif index == 130:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1247,7 +1247,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Group Edit Results
-        elif index == 130:
+        elif index == 131:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1257,7 +1257,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=2, interval=0.07)
                 pass  #Regular
         #Calendar views for Managers <Closing Scheduling with initial click and 26 Tabs> 
-        elif index == 131:
+        elif index == 132:
             if setting == 'allowed':
                 pyautogui.press('up')
                 mouse_click(initial_x, initial_y)  # Reset click position 
@@ -1272,116 +1272,116 @@ def automate_settings(row, initial_x, initial_y):
         
         #---------------------------------------------------------
         # Timecard Editor for Managers 
-        if  index == 132:
+        if  index == 133:
              tab_and_open(33)
              time.sleep(1)            
         # Timecard access
-        elif  index == 133:    
+        elif  index == 134:    
             press_tab_and_decide(setting,36)       
         # Allow negatives in Timecard Editor
-        elif  index == 134:
+        elif  index == 135:
             press_tab_and_decide(setting,38)                
         # Approval in Timecard Editor 
-        elif  index == 135:
+        elif  index == 136:
             tab_and_open(40)
             time.sleep(1)       
         # Add
-        elif  index == 136:
+        elif  index == 137:
             press_tab_and_decide(setting,43)           
         # Remove
-        elif  index == 137:
+        elif  index == 138:
             press_tab_and_decide(setting,45)           
         # Remove All
-        elif  index == 138:
+        elif  index == 139:
             press_tab_and_decide(setting,47)  
         # Edit data after non account approval by self
-        elif  index == 139:
+        elif  index == 140:
             press_tab_and_decide(setting,49)   
         # Edit data after non account approval by others
-        elif  index == 140:
+        elif  index == 141:
             press_tab_and_decide(setting,51) 
             # End of Approval in Timecard Editor (close)
             tab_and_open(40)
             time.sleep(1)
         # Cancel meal deductions in Timecard Editor
-        elif  index == 141:
+        elif  index == 142:
             press_tab_and_decide(setting,43)            
         # Comments in Timecard Editor
-        elif  index == 142:
+        elif  index == 143:
             press_tab_and_decide(setting,45)
             press_tab_and_decide(setting,46)                      
         # Notes for Comments in Timecard Editor 
-        elif  index == 143:
+        elif  index == 144:
             tab_and_open(48)
             time.sleep(1)           
         # Add or Remove
-        elif  index == 144:
+        elif  index == 145:
             press_tab_and_decide(setting,51)       
         # Remove Notes added by Others
-        elif  index == 145:
+        elif  index == 146:
             press_tab_and_decide(setting,53)
             # end of Notes for Comments in Timecard Editor (close)
             tab_and_open(48)
             time.sleep(1)           
         # Hours Worked amount in Timecard Editor
-        elif  index == 146:
+        elif  index == 147:
             press_tab_and_decide(setting,51)            
         # Pay codes in Timecard Editor 
-        elif  index == 147:    
+        elif  index == 148:    
             tab_and_open(53)
             time.sleep(1)    
         # Edit
-        elif  index == 148:
+        elif  index == 149:
             press_tab_and_decide(setting,56)
         # View
-        elif  index == 149:
+        elif  index == 150:
             press_tab_and_decide(setting,58)
         # Move Amount
-        elif  index == 150:
+        elif  index == 151:
             press_tab_and_decide(setting,60)
         # Start Time on pay code edits
-        elif  index == 151:
+        elif  index == 152:
             press_tab_and_decide(setting,64)
         # Justify Missed Time Exceptions
-        elif  index == 152:
+        elif  index == 153:
             press_tab_and_decide(setting,66)
         # Mark Exceptions Reviewed in Timecard Editor
-        elif  index == 153:
+        elif  index == 154:
             press_tab_and_decide(setting,68)
             # End of Pay codes in Timecard Editor (close)
             tab_and_open(53)
             time.sleep(1)   
         # Punch edits in Timecard Editor
-        elif  index == 154:
+        elif  index == 155:
             press_tab_and_decide(setting,56)
         # Sign-off in Timecard Editor 
-        elif  index == 155:    
+        elif  index == 156:    
             tab_and_open(58)
             time.sleep(1)
         # Add
-        elif  index == 156:
+        elif  index == 157:
             press_tab_and_decide(setting,61)
         # Remove
-        elif  index == 157:
+        elif  index == 158:
             press_tab_and_decide(setting,63)
             # End of Sign-off in Timecard Editor (close)
             tab_and_open(58)
             time.sleep(1)    
         # Calculate totals in Timecard Editor
-        elif  index == 158:
+        elif  index == 159:
             press_tab_and_decide(setting,61)
         # Totals breakdown in Timecard Editor
-        elif  index == 159:
+        elif  index == 160:
             press_tab_and_decide(setting,63)
         # Transfers in Timecard Editor 
-        elif  index == 160:    
+        elif  index == 161:    
             tab_and_open(67)
             time.sleep(1)
         # View transfers
-        elif  index == 161:
+        elif  index == 162:
             press_tab_and_decide(setting,70)
         # Perform cost center transfers
-        elif  index == 162:
+        elif  index == 163:
             press_tab_and_decide(setting,72)
         # Perform labor category transfers
         elif  index == 163:
@@ -1556,10 +1556,8 @@ def automate_settings(row, initial_x, initial_y):
                 time.sleep(2)
         # Refine Filters (skip)
         # Access to Attendance Detail Page and Calendar
-        elif  index == 59:
-            press_tab_and_decide(setting,80)       
         elif  index == 192:
-            press_tab_and_decide(setting,80)
+            press_tab_and_decide(setting,80)       
         # Forward Attendance Documents
         elif  index == 193:
             press_tab_and_decide(setting,82)
@@ -1675,10 +1673,13 @@ def automate_settings(row, initial_x, initial_y):
             # End of dept Manager (close)
             tab_and_open(20)
             time.sleep(1)    
+        
+        
+        
         #----------------------------------#    
         #Manager - Common Setup
         elif index == 212:
-            if setting == '' or setting == 'None':                
+            if setting == 'Null' or setting == 'None':                
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=23, interval=0.07)
                 pyautogui.press('enter')
@@ -1688,14 +1689,14 @@ def automate_settings(row, initial_x, initial_y):
                 pass
         #Hyperfind
         elif index == 213:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=26, interval=0.07)
                 pyautogui.press('enter')
                 pass
         #Query conditions
         elif index == 214:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=29, interval=0.07)
                 pyautogui.press('enter')        
@@ -1798,7 +1799,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         #Query tabs
         elif index == 224:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=32, interval=0.07)
                 pyautogui.press('enter')        
@@ -1821,7 +1822,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         #Query visibility
         elif index == 226:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=35, interval=0.07)
                 pyautogui.press('enter')        
@@ -1867,7 +1868,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         #People Editor
         elif index == 230:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=29, interval=0.07)
                 pyautogui.press('enter')
@@ -1900,7 +1901,7 @@ def automate_settings(row, initial_x, initial_y):
 #---------------------------------------------------------------------------------#
 #Employee Group
         elif index == 233:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=41, interval=0.07)
                 pyautogui.press('enter')
@@ -1908,7 +1909,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Open
         #Information view
         elif index == 234:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=44, interval=0.07)
                 pyautogui.press('enter')
@@ -1958,7 +1959,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Regular
         #Access user account
         elif index == 239:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=62, interval=0.07)
                 pyautogui.press('enter')
@@ -2014,7 +2015,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Regular
         #Reports To
         elif index == 244:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=76, interval=0.07)
                 pyautogui.press('enter')
@@ -2060,7 +2061,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Regular
         #Contact Information view
         elif index == 248:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=47, interval=0.07)
                 pyautogui.press('enter')
@@ -2115,14 +2116,14 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Closes Contact information view dropdown 
         # Timekeeping Group
         elif index == 253:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=47, interval=0.07)
                 pyautogui.press('enter')
                 pass    #Open    
         #Timekeeper view
         elif index == 254:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=53, interval=0.07)
                 pyautogui.press('enter')
@@ -2154,7 +2155,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close
         #Scheduling Group
         elif index == 257:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=50, interval=0.07)
                 pyautogui.press('enter')
@@ -2173,7 +2174,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Regular
         #Skills & Certifications view
         elif index == 259:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=59, interval=0.07)
                 pyautogui.press('enter')
@@ -2215,7 +2216,7 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Close
         #Event Manager
         elif index == 262:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=45, interval=0.07)
                 pyautogui.press('enter')
@@ -2238,14 +2239,14 @@ def automate_settings(row, initial_x, initial_y):
                 pass    #Close       
         #Schedule Configuration
         elif index == 264:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=58, interval=0.07)
                 pyautogui.press('enter')
                 pass    #Open
         #Skills & Certifications
         elif index == 265:
-            if setting == '':
+            if setting == 'Null':
                 mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=66, interval=0.07)
                 pyautogui.press('enter')
@@ -2310,11 +2311,10 @@ def automate_settings(row, initial_x, initial_y):
                 pass  #Regular
         
         
-        '''
+        """
         End Of Program
         Manager System Config Disallow All. 
-        All thanks to Kevin and Timi. 
-        '''
+        All thanks to Kevin and Timi."""
         
         # Delay to avoid sending inputs too quickly
         time.sleep(0.5)
