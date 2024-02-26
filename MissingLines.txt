@@ -1,0 +1,49 @@
+Accruals in My Timecard
+Accruals in Timecard Editor
+Activities in My Timecard
+Add or Remove
+Allow negatives in Timecard Editor
+Approval in Timecard Editor
+Calculate totals in Timecard Editor
+Cancel meal deductions in Timecard Editor
+Comments in Timecard Editor
+E-mail Notifications to Managers
+Edit
+Edits to signed off time
+Enable Job Transfer Validation
+Hours Worked amount in Timecard Editor
+Insert transfer
+Insert transfer <Two Tabs to Employee visibility period and enter> Not closing any Drops
+Justify Missed Time Exceptions
+Leave Cases for Employees
+Manage Leave Time in My Timecard
+Mark Exceptions Reviewed in Timecard Editor
+Move Amount
+Notes for Comments in Timecard Editor
+Open Shift Available Notification
+Pay codes in Timecard Editor
+Punch edits in Dataviews
+Punch edits in Dataviews#
+Punch edits in Timecard Editor
+Remove Notes added by Others
+Report Page
+Report Scheduling: All Access
+Report scheduling
+Reports
+Reports in Timecard Editor
+Rule Analysis Tool Report in Timecard editor
+Run reports
+Schedule report delivery to email as attachment
+Schedule reports for others
+Shift Available Notification
+Shift Template Configuration
+Sign-off in Timecard Editor
+Timecard Editor for Managers
+Timecard access
+Totals breakdown in Timecard Editor
+Transfers in Timecard Editor
+View
+View documents
+View schedules in Timecard Editor
+View the Audit Trail Tab in Timecard Editor
+View transfers

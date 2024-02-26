@@ -1,0 +1,663 @@
+#Everyone 
+If index == 0:
+
+#Open an online form
+elif index == 1:
+
+#Show Person Number
+elif index == 2:
+
+#Employee 
+elif index == 3:
+
+# Time Stamp for Employees
+elif index == 4:
+
+#Cancel meal deductions in Time Stamp 
+elif index == 5:
+
+# "Calendar"
+elif index == 6:
+
+# Calendar views for employees 
+elif index == 7: 
+
+# Print Schedule
+elif index == 8:
+
+# Employee Visibility Periods
+elif index == 9:
+
+# Timecard Editor for Employees (My Timecard)
+elif index == 10:
+
+# Comments in My Timecard - Add 
+elif index == 11:
+
+# Comments in My Timecard - Delete
+elif index == 12:
+
+# Notes for Comments in My Timecard
+elif index == 13:
+
+# Hours Worked amount in My Timecard
+elif index == 14:
+
+# "Pay Codes in My Timecard - Edit"
+elif index == 15:
+
+# Pay Codes in My Timecard - View
+elif index == 16:
+
+# Move Amounts in My Timecard
+elif index == 17:
+
+# Punch edits in My Timecard
+elif index == 18:
+
+# Calculate totals in My Timecard
+elif index == 19:
+
+# Totals breakdown in My Timecard
+elif index == 20:
+
+# View schedules in My timecard
+elif index == 21:
+
+# View the Audit Trail Tab in My Timecard
+elif index == 22:
+
+# Transfers - View transfers
+elif index == 23:
+
+# Perform cost center transfers
+elif index == 24:
+
+# Perform labor category transfers
+elif index == 25:
+
+# Perform work rule transfers
+elif index == 26:
+
+# Perform job transfers
+elif index == 27:
+
+# Access to Employee Home Page
+elif index == 28:
+
+# Employee access to My Actions list
+elif index == 29:
+
+# Location Data
+elif index == 30:
+
+# View location data
+elif index == 31:
+
+# Enable location schedule
+elif index == 32:
+
+# Access unposted schedule
+elif index == 33:
+
+# My Requests
+elif index == 34:
+
+# Comments & Notes in my request
+elif index == 35:
+
+# Impersonation Access
+elif index == 36:
+
+# Offline
+elif index == 37:
+
+# Mobile App Punch
+elif index == 38: 
+
+# Manager - Department Manager
+elif index == 39:
+
+# Dataviews - Group Edits
+elif index == 40:
+
+# Group approval of timecards
+elif index == 41:
+
+# Add
+elif index == 42:
+
+# Remove
+elif index == 43:
+
+#Remove All
+elif index == 44:
+
+#Edit data after non account approval by self
+elif index == 45:
+
+#Edit data after non account approval by others
+elif index == 46:
+
+#Comments in Dataviews
+elif index == 47:
+
+#Notes for comments in Dataviews
+elif index == 48:
+
+#Filter by Selected Job Seniority
+elif index == 49:
+
+#Pay code edits in Dataviews
+elif index == 50:
+
+#Mark Exceptions as Reviewed
+elif index == 51:
+
+#Pay from Schedule in Dataviews
+elif index == 52:
+
+#Start Pay from Schedule
+elif index == 53: 
+
+#Stop Pay from Schedule
+elif index == 54:
+
+#Punch edits in Dataviews#
+elif index == 55: 
+
+#Sign-off in Dataviews
+elif index == 56:
+
+#Add
+elif index == 57: 
+
+#Remove
+elif index == 58:
+
+#Transfers in Dataviews
+elif index == 59:
+
+#Perform labor category transfers
+elif index == 60:
+
+#Perform cost center transfers
+elif index == 61:
+
+
+#Perform work rule transfers
+elif index == 62:
+
+#Perform job transfers
+elif index == 63:
+
+#Start Time on pay code edits
+elif index == 64:
+
+#Scheduling
+elif index == 65:
+
+#Shift Available Notification
+elif index == 66:
+
+#Schedule access
+elif index == 67:
+
+#Filter Location by Employee Group
+elif index == 68:
+
+#Schedule Views
+elif index == 69:
+
+#Employment Term View of Schedule
+elif index == 70:
+
+#Employee View of Schedule
+elif index == 71:
+
+#Group View of Schedule
+elif index == 72:
+
+#Job View of Schedule
+elif index == 73:
+
+#Display Location-based Add-on Data when Employee Group Filtering Enabled
+elif index == 74:
+
+#Run reports within Schedule Planner
+elif index == 75:
+
+#Pay Code Comments in Schedules
+elif index == 76:
+
+#Notes for Pay Code Comments in Schedules
+elif index == 77:
+
+#Schedule Quick Actions 50 tabs
+elif index == 78:
+
+#Add segment tag
+elif index == 79:
+
+#Schedule pay code edits
+elif index == 80:
+
+#View audit trails in Schedules
+elif index == 81:
+
+#Filter audit trails in Schedules
+elif index == 82:
+
+#Transfers in Schedules
+elif index == 83:
+
+#Perform labor category transfers
+elif index == 84:
+
+#Perform cost center transfers
+elif index == 85:
+
+#Perform work rule transfers
+elif index == 86:
+
+#Perform job transfers
+elif index == 87:
+
+#Schedule Shift Comments
+elif index == 88:
+
+#Notes for Schedule Shift Comments
+elif index == 89:
+
+#Mark Schedule Posted
+elif index == 90:
+
+#Mark Schedule Unposted
+elif index == 91:
+
+#Availability
+elif index == 92:
+
+#Workload Planner 
+elif index == 93:
+
+#Budget Pattern
+elif index == 94:
+
+#Budget Calendar
+elif index == 95:
+
+#Plan Pattern
+elif index == 96:
+
+#Plan Calendar
+elif index == 97:
+
+#Budget Volume
+elif index == 98:
+
+#Plan Volume
+elif index == 99:
+
+#Actual Volume
+elif index == 100:
+
+#Actual Calendar
+elif index == 101:
+
+#Generate Workload
+elif index == 102:
+
+#Lock Volume
+elif index == 103:
+
+#Run Priority Scheduling Engine
+elif index == 104: # Note: Duplicate index with different action, please check.
+
+#Run Schedule Engine
+elif index == 105:
+
+#Schedule Day Lock
+elif index == 106:
+
+#Shift Profile Sets
+elif index == 107:
+
+#Shift Profiles
+elif index == 108:
+
+#Enter Time Off
+elif index == 109:
+
+#Pay Code Edits using Pattern Day
+elif index == 110:
+
+#Add to Schedule Group
+elif index == 111:
+
+#Remove from Schedule Group
+elif index == 112:
+
+#Edit Group Schedules
+elif index == 113:
+
+#Lock Shifts
+elif index == 114:
+
+#Assign Breaks
+elif index == 115:
+
+#Team Definition Setup
+elif index == 116:
+
+#Team Definition Setup Extended Access
+elif index == 117:
+
+#Replace shift
+elif index == 118:
+
+#Append shift
+elif index == 119:
+
+#Insert transfer <Two Tabs to Employee visibility period and enter> Not closing any Drops
+elif index == 120:
+
+#Employee Visibility Periods
+elif index == 121:
+
+#Request Submission Control
+elif index == 122:
+
+#Request Period Extended Access
+elif index == 123:
+
+#Recurrent / Rolling periods
+elif index == 124:
+
+#Multi-Group options
+elif index == 125:
+
+#Employee Priority option
+elif index == 126:
+
+#Personal Hyperfinds for Employee Query
+elif index == 127:
+
+#Visibility Period Actions
+elif index == 128:
+
+#Call Log
+elif index == 129:
+
+#Call List
+elif index == 130:
+
+#Group Edit Results
+elif index == 131:
+
+#Calendar views for Managers
+elif index == 132:
+
+# E-mail a completed group edit
+elif index == 180:
+
+# E-mail when a group edit was not completed
+elif index == 181:
+
+# E-mail when event status has changed
+elif index == 182:
+
+# Manager access to Actions list
+elif index == 183:
+
+# Attendance for Managers (expand)
+elif index == 184:
+
+# View Audit Data
+elif index == 185:
+
+# Perfect attendance definitions
+elif index == 186:
+
+# Source policy
+elif index == 187:
+
+# Attendance Actions
+elif index == 188:
+
+# Apply Rules
+elif index == 189:
+
+# Attendance Balance Resets and Adjustments
+elif index == 190:
+
+# Attendance Events
+elif index == 191:
+
+# Access to Attendance Detail Page and Calendar
+elif index == 192:
+
+# Forward Attendance Documents
+elif index == 193:
+
+# View Attendance Documents
+elif index == 194:
+
+# Location Data (expand)
+elif index == 195:
+
+# View location data
+elif index == 196:
+
+# Leave Cases For Managers (expand)
+elif index == 197:
+
+# Access to Leave Landing Page
+elif index == 198:
+
+# Access to Leave Case Editor, Leave Calendar and Takings List
+elif index == 199:
+
+# Access to Leave Audit
+elif index == 200:
+
+# Manage Leave Case (expand)
+elif index == 201:
+
+# Leave Case Documents (expand)
+elif index == 202:
+
+# Forward documents
+elif index == 203:
+
+# Leave Case Additional Information
+elif index == 205:
+
+# Leave Case Notes
+elif index == 206:
+
+# Edit signed off time (expand)
+elif index == 207:
+
+# Allow enable edits for employees
+elif index == 208:
+
+# Dataview Personalization
+elif index == 209:
+
+# Include inactive and terminated employees into search result
+elif index == 210:
+
+#Employee Search
+elif index == 211:
+
+#Manager - Common Setup
+elif index == 212:
+
+#Hyperfind
+elif index == 213:
+
+#Query conditions
+elif index == 214:
+   
+#Display Business Structure & Job Information in Hyperfind
+elif index == 215:
+
+#General Information category
+elif index == 216:
+
+#Timekeeper category
+elif index == 217:
+  
+#Time Management category
+elif index == 218:
+
+#Scheduler category
+elif index == 219:
+   
+#Advanced Scheduler category
+elif index == 220:
+
+#User Information category
+elif index == 221:
+  
+#Role - Timekeeper category
+elif index == 222:
+
+#Attendance Category
+elif index == 223:
+  
+#Query tabs
+elif index == 224:
+   
+#Assemble Query tab
+elif index == 225:
+   
+#Query visibility
+elif index == 226:
+   
+#Ad hoc queries
+elif index == 227:
+
+#Personal queries
+elif index == 228:
+
+#Query Manager
+elif index == 229:
+   
+#People Editor
+elif index == 230:
+   
+#Person
+elif index == 231:
+   
+#License view
+elif index == 232:
+
+#Employee Group
+elif index == 233:
+  
+#Information view
+elif index == 234:
+
+#Person name
+elif index == 235:
+
+#Person ID
+elif index == 236:
+   
+#Hire date
+elif index == 237:
+
+#Employment status
+elif index == 238:
+
+#Access user account
+elif index == 239:
+
+#User name
+elif index == 240:
+
+#Primary Labor Category
+elif index == 241:
+  
+#Primary Job
+elif index == 242:
+
+#Time Zone  
+elif index == 243:
+   
+#Reports To
+elif index == 244:
+
+#Reports To Field
+elif index == 245:
+
+#Manager ID Column
+elif index == 246:
+  
+#Seniority Date
+elif index == 247:
+
+#Contact Information view
+elif index == 248:
+
+#E-mail
+elif index == 249:
+
+#Telephone
+elif index == 250:
+
+#Additional Information view
+elif index == 251:
+   
+#Person's Dates View
+elif index == 252:
+   
+# Timekeeping Group
+elif index == 253:
+
+#Timekeeper view
+elif index == 254:
+   
+#Percent Allocation Assignment
+elif index == 255:
+ 
+#Employment Terms view
+elif index == 256:
+
+#Scheduling Group
+elif index == 257:
+  
+#Scheduler view
+elif index == 258:
+   
+#Skills & Certifications view
+elif index == 259:
+
+#Skills on a person
+elif index == 260:
+  
+#Certifications on a person
+elif index == 261:
+
+#Event Manager
+elif index == 262:
+  
+#Individual events
+elif index == 263:   
+
+#Schedule Configuration
+elif index == 264:
+
+#Skills & Certifications
+elif index == 265:
+
+#Certifications
+elif index == 266:
+
+#Skills
+elif index == 267:
+
+#Manager - System Configuration
+elif index == 269:

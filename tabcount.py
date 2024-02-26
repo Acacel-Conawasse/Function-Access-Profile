@@ -12,10 +12,10 @@ class GlobalTabCounter:
         self.master.title("Tab Automation Tool")
         
         self.required_tabs_label = Label(self.master, text="Enter number of Tab key presses:")
-        self.required_tabs_label.pack(pady=(10, 0))
+        self.required_tabs_label.pack(pady=(30, 0))
         
         self.required_tabs_entry = Entry(self.master)
-        self.required_tabs_entry.pack(pady=(0, 10))
+        self.required_tabs_entry.pack(pady=(0, 30))
         
         self.start_button = Button(self.master, text="Start", command=self.perform_tab_presses)
         self.start_button.pack(pady=5)
@@ -29,7 +29,8 @@ class GlobalTabCounter:
             # Simulate the required number of Tab key presses
             for _ in range(self.required_tabs):
                 pyautogui.press('tab')
-                pyautogui.sleep(0.0000001)
+                pyautogui.sleep(0.0000000000000000000001)
+                
 
         except ValueError:
             print("Please enter a valid integer for the number of Tab presses.")
