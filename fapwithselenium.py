@@ -2,6 +2,69 @@ import pyautogui
 import csv
 import time
 pyautogui.FAILSAFE = True  # Enable failsafe by moving the mouse to the upper left corner
+
+def process_actions_for_fap(fap_name):
+    # Define actions based on the FAP name
+    actions = {
+        "Default": 30,
+        "ESS PCE-Notes-PE": 32,
+        "ESS Posted": 34,
+        "ESS Posted MP": 36,
+        "ESS Timestamp": 38,
+        "ESS UnPosted": 38,
+        "ESS UnPosted MP": 40,
+        "ESS VO": 42,
+        "FSU SuperUser": 44,
+        "Kronos Reporting Analyst": 46,
+        "Mgr Level 2": 48,
+        "Mgr Level 2-AdvSched": 50,
+        "Mgr Level 2-AdvSched-MP": 52,
+        "Mgr Level 2-MP": 54,
+        "Mgr Level 3": 56,
+        "Mgr Level 3-AdvSched": 58,
+        "Mgr Level 3-AdvSched-DT": 60,
+        "Mgr Level 3-AdvSched-MP": 11,
+        "Mgr Level 3-AdvSched-PFS": 12,
+        "Mgr Level 3-AdvSched-Self": 12,
+        "Mgr Level 3-AdvSchedERP-Moves": 12,
+        "Mgr Level 3-DT": 12,
+        "Mgr Level 3-MP": 12,
+        "Mgr Level 3-Self": 12,
+        "PowerUser": 12,
+        "Schedulers VO": 12,
+        "Schedulers, VO-TCAT": 12,
+        "Schedulers, VO-TCAT-MP": 12,
+        "SMgr Level 3": 12,
+        "SMgr Level 3-AdvSched": 12,
+        "SMgr Level 3-AdvSched-DT": 12,
+        "SMgr Level 3-AdvSched-MP": 12,
+        "SMgr Level 3-AdvSched-PFS": 12,
+        "SMgr Level 3-AdvSched-Self": 12,
+        "SMgr Level 3-AdvSchedERP-Moves": 12,
+        "SMgr Level 3-DT": 12,
+        "SMgr Level 3-MP": 12,
+        "SMgr Level 3-Self": 12,
+        "Super Access": 12,
+        "SysAdmin": 12,
+        "Timekeepers": 12,
+        "Timekeepers-AdvSched": 12,
+        "Timekeepers-AdvSchedDT": 12,
+        "TK Hourly Employee": 12,
+        "TK Hourly Manager": 12,
+        "TK Manager": 12,
+        "TK Professional Employee": 12
+    }
+
+    if fap_name in actions:
+        # Perform actions based on the specified number of tabs
+        tabs_count = actions[fap_name]
+        print(f"Performing actions for FAP: {fap_name} with {tabs_count} tabs.")
+        mouse_click(-1185,-212)  # Reset click position 
+        tabto(tabs_count)
+        pyautogui.press('enter')
+        time.sleep(3)
+    else:
+        print(f"No actions specified for FAP: {fap_name}")
 # Function to perform mouse click at specified coordinates
 def mouse_click(x, y):
     pyautogui.click(x, y)
@@ -9,11 +72,9 @@ def mouse_click(x, y):
 def automate_settings(row, initial_x, initial_y):
     # Reset to the starting point for each setting
     mouse_click(initial_x, initial_y)
-    
     # Process each setting based on its index
     for index, setting in enumerate(row):
         print(f"Processing setting at index {index}: {setting}")  #Print the current setting being processed
-
         #Everyone 
         if index == 0:
             if setting == 'Null':
@@ -54,9 +115,7 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('enter')
                 time.sleep(1)
                 pass    #Close
-#End of Everyone Section. 
-#-------------------------------------------------------------------------------------------------------------------
-#Employee 
+        #Employee 
         elif index == 3:
                 #Employee  Mouse Click (-1664,69)
                 tab_and_open(17)
@@ -2568,11 +2627,18 @@ def automate_settings(row, initial_x, initial_y):
                 pyautogui.press('tab', presses=27, interval=0.07)
                 pyautogui.press('a')
                 time.sleep(1)
+                mouse_click(initial_x, initial_y)
+                pyautogui.press('tab', presses=27, interval=0.07)
+                pyautogui.press('enter')
                 pass
             elif setting == 'disallowed' or setting == "Null":
+                mouse_click(initial_x, initial_y)
                 pyautogui.press('tab', presses=27, interval=0.07)
                 pyautogui.press('d')
                 time.sleep(1)
+                mouse_click(initial_x, initial_y)
+                pyautogui.press('tab', presses=27, interval=0.07)
+                pyautogui.press('enter')
                 pass  #Regular
     
         """
@@ -2599,7 +2665,7 @@ def move_and_click(x, y, delay=0.7):
     time.sleep(delay)
 def mouse_click(x, y):
     pyautogui.click(x, y)    
-def tabto(count,initial_x=3216, initial_y=143):
+def tabto(count,initial_x=-1185, initial_y=-212):
     mouse_click(initial_x, initial_y)
     pyautogui.press('tab', presses=count, interval=0.07)           
 # Function to press tab the required number of times and then either up+tab or down based on the setting
@@ -2627,13 +2693,41 @@ def tab_and_open(count):
     time.sleep(1)
 #End of The Kwiggler's Functions -------------------------------------------------------------------------------------------------------------------
 # Read settings.txt and apply settings
+
+
 def main():
-    initial_x, initial_y = 3216, 146  # Update these values to the initial click position
-    with open('settings.txt', mode='r') as file:
-        reader = csv.reader(file)
-        headers = next(reader)  # Skip the header row
-        for row in reader:
-            automate_settings(row, initial_x, initial_y)
+    with open('FAPNames.txt', mode='r') as fap_file:
+        fap_names = fap_file.readlines()
+
+    with open('settings.txt', mode='r') as settings_file:
+        settings_reader = csv.reader(settings_file)
+        headers = next(settings_reader)  # Skip the header row
+        
+        for fap_name in fap_names:
+            # Process actions based on the FAP name
+            process_actions_for_fap(fap_name.strip())
+
+            # Press Enter after processing actions
+            pyautogui.press('enter')
+            time.sleep(1)
+
+            # Process settings for the current FAP name
+            print(f"Processing for FAP: {fap_name.strip()}")
+            initial_x, initial_y = -1185,-212  # Update these values to the initial click position
+            settings_row = next(settings_reader)  # Get the corresponding settings row
+            automate_settings(settings_row, initial_x, initial_y)
             time.sleep(3)  # Delay between processing each row
+
 if __name__ == "__main__":
+    main()
+
+#def main():
+#    initial_x, initial_y = 3216, 146  # Update these values to the initial click position
+#    with open('settings.txt', mode='r') as file:
+#        reader = csv.reader(file)
+#        headers = next(reader)  # Skip the header row
+#        for row in reader:
+#            automate_settings(row, initial_x, initial_y)
+#            time.sleep(3)  # Delay between processing each row
+#if __name__ == "__main__":
     main()
