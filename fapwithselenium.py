@@ -6,6 +6,7 @@ pyautogui.FAILSAFE = True  # Enable failsafe by moving the mouse to the upper le
 def process_actions_for_fap(fap_name):
     # Define actions based on the FAP name
     actions = {
+        #Page 1 
         "Default": 30,
         "ESS PCE-Notes-PE": 32,
         "ESS Posted": 34,
@@ -22,7 +23,35 @@ def process_actions_for_fap(fap_name):
         "Mgr Level 2-MP": 54,
         "Mgr Level 3": 56,
         "Mgr Level 3-AdvSched": 58,
-        "Mgr Level 3-AdvSched-DT": 60
+        "Mgr Level 3-AdvSched-DT": 60,
+        #Page 2 
+        "Mgr Level 3-AdvSched-MP": 15,
+        "Mgr Level 3-AdvSched-PFS": 17,
+        "Mgr Level 3-AdvSched-Self": 19,
+        "Mgr Level 3-AdvSchedERP-Moves": 21,
+        "Mgr Level 3-DT": 23,
+        "Mgr Level 3-MP": 25,
+        "Mgr Level 3-Self": 27,
+        "PowerUser": 29,
+        "Schedulers VO": 31,
+        "Schedulers, VO-TCAT": 33,
+        "Schedulers, VO-TCAT-MP": 35,
+        "SMgr Level 3": 37,
+        "SMgr Level 3-AdvSched": 39,
+        "SMgr Level 3-AdvSched-DT": 41,
+        "SMgr Level 3-AdvSched-MP": 43,
+        "SMgr Level 3-AdvSched-PFS": 45,
+        "SMgr Level 3-AdvSched-Self": 47,
+        "SMgr Level 3-AdvSchedERP-Moves": 49,
+        "SMgr Level 3-DT": 51,
+        "SMgr Level 3-MP": 53,
+        "SMgr Level 3-Self": 55,
+        "Super Access": 57,
+        "SysAdmin": 59,
+        "Timekeepers": 61,
+        "Timekeepers-AdvSched": 63,
+        #Page3
+        "Timekeepers-AdvSchedDT": 14,
     }
 
     if fap_name in actions:
