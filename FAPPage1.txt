@@ -1,4 +1,5 @@
-Default ,ESS PCE-Notes-PE
+Default 
+ESS PCE-Notes-PE
 ESS Posted
 ESS Posted-MP
 ESS Timestamp
@@ -6,16 +7,10 @@ ESS UnPosted
 ESS UnPosted-MP
 ESS VO
 Kronos Reporting Analyst
-PowerUser
-Mgr Level 2 ,Mgr Level 2 AdvSched
+Mgr Level 2 
+Mgr Level 2 AdvSched
 Mgr Level 2 AdvSched-MP
 Mgr Level 2-MP
 Mgr Level 3
 Mgr Level 3 AdvSched
 Mgr Level 3 AdvSched-DT
-Mgr Level 3 AdvSchedERP-Moves
-Mgr Level 3 AdvSchedERP-PFS
-Mgr Level 3 AdvSched-MP
-Mgr Level 3 AdvSched-Self
-Mgr Level 3-DT
-Mgr Level 3-MP
