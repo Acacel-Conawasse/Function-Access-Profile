@@ -1,8 +1,8 @@
 # Define paths for the input and output files
 # Adjust the paths to include the full directory path from the root or relative to where the script is executed
-input_file_path = 'C:/Users/omalomo3/Desktop/FAP/Function-Access-Profile/Function-Access-Profile/TxtEditors/inputfiltered.txt'
-output_file_path = 'C:/Users/omalomo3/Desktop/FAP/Function-Access-Profile/Function-Access-Profile/TxtEditors/txtFAP.txt'
-temp_file_path = 'C:/Users/omalomo3/Desktop/FAP/Function-Access-Profile/Function-Access-Profile/TxtEditors/temp_inputfiltered.txt'
+input_file_path = 'C:/Users/omalomo3/Desktop/FAP/Function-Access-Profile/Function-Access-Profile/TxtEditors/Page3.txt'
+output_file_path = 'C:/Users/omalomo3/Desktop/FAP/Function-Access-Profile/Function-Access-Profile/TxtEditors/FAPPage3.txt'
+temp_file_path = 'C:/Users/omalomo3/Desktop/FAP/Function-Access-Profile/Function-Access-Profile/TxtEditors/temp_FAPPage3.txt'
 
 
 # Open the input file and a temporary file to write the modified content

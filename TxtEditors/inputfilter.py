@@ -1,9 +1,10 @@
 import csv
 
 # Define the path to the input file
-input_file_path = 'final.txt'
+input_file_path = 'C:\\Users\\omalomo3\\Desktop\\FAP\\Function-Access-Profile\\Function-Access-Profile\\TxtEditors\\final.txt'
+
 # Define the path to the output file
-output_file_path = 'inputfiltered.txt'
+output_file_path = 'C:\\Users\\omalomo3\\Desktop\\FAP\\Function-Access-Profile\\Function-Access-Profile\\TxtEditors\\inputfiltered.txt'
 
 # Initialize a list to hold all column values, for 40 columns
 columns = [[] for _ in range(40)]  # Adjust the range to match the exact number of columns
