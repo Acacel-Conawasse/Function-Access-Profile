@@ -7,8 +7,8 @@ Mgr Level 3-MP
 Mgr Level 3-Self
 PowerUser
 Schedulers VO
-Schedulers
-Schedulers
+Schedulers VO-TCAT
+Schedulers VO-TCAT-MP
 SMgr Level 3
 SMgr Level 3 AdvSched
 SMgr Level 3 AdvSched-DT
