@@ -1,4 +1,6 @@
 import pyautogui
+import tkinter as tk
+from threading import Thread
 import csv
 import time
 pyautogui.FAILSAFE = True  # Enable failsafe by moving the mouse to the upper left corner
@@ -22,7 +24,7 @@ def process_actions_for_fap(fap_name):
         #"Mgr Level 2 AdvSched-MP": 52,
         #"Mgr Level 2-MP": 54,
         #"Mgr Level 3": 56,
-        #"Mgr Level 3 AdvSched": 58,
+        #"Mgr Level 3 AdvSched": 58,                                    
         #"Mgr Level 3 AdvSched-DT": 60,
         #Page 2 
         "Mgr Level 3 AdvSched-MP": 15,
@@ -34,8 +36,8 @@ def process_actions_for_fap(fap_name):
         "Mgr Level 3-Self": 27,
         "PowerUser": 29,
         "Schedulers VO": 31,
-        "Schedulers": 33,
-        "Schedulers": 35,
+        "Schedulers VO-TCAT": 33,
+        "Schedulers VO-TCAT-MP": 35,
         "SMgr Level 3": 37,
         "SMgr Level 3 AdvSched": 39,
         "SMgr Level 3 AdvSched-DT": 41,
@@ -54,16 +56,22 @@ def process_actions_for_fap(fap_name):
         #"Timekeepers AdvSchedDT": 14
     }
 
-    if fap_name in actions:
-        # Perform actions based on the specified number of tabs
-        tabs_count = actions[fap_name]
-        print(f"Performing actions for FAP: {fap_name} with {tabs_count} tabs.")
-        mouse_click(-1266,-217)  # Reset click position 
-        tabto(tabs_count)
-        pyautogui.press('enter')
-        time.sleep(3)
-    else:
-        print(f"No actions specified for FAP: {fap_name}")
+
+    
+    with open('logfile.txt','a') as logfile:
+        if fap_name in actions:
+            # Perform actions based on the specified number of tabs
+            tabs_count = actions[fap_name]
+            log_message = f"Performing actions for FAP: {fap_name} with {tabs_count} tabs"
+            print(log_message)
+            logfile.write(log_message + '\n')
+            print(f"Performing actions for FAP: {fap_name} with {tabs_count} tabs.")
+            mouse_click(-4444,-1676)  # Reset click position 
+            tabto(tabs_count)
+            pyautogui.press('enter')
+            time.sleep(3)
+        else:
+            print(f"No actions specified for FAP: {fap_name}")
 # Function to perform mouse click at specified coordinates
 def mouse_click(x, y):
     pyautogui.click(x, y)
@@ -72,8 +80,11 @@ def automate_settings(row, initial_x, initial_y):
     # Reset to the starting point for each setting
     mouse_click(initial_x, initial_y)
     # Process each setting based on its index
-    for index, setting in enumerate(row):
-        print(f"Processing setting at index {index}: {setting}")  #Print the current setting being processed
+    for index, setting in enumerate(row):       
+        log_message = f"Processing setting at index {index}: {setting}"  # Prepare log message
+        print(log_message)  # Print the current setting being processed
+        with open('logfile.txt', 'a') as logfile:
+            logfile.write(log_message + '\n')  # Write log message to file
         #Everyone 
         if index == 0:
             if setting == 'Null':
@@ -1156,7 +1167,7 @@ def automate_settings(row, initial_x, initial_y):
             elif setting == 'disallowed' or setting == "Null":
                 pyautogui.press('tab', presses=4, interval=0.07)
                 pass  #Regular
-        #Schedule Day Lock
+        #                                                           
         elif index == 106:
             if setting == 'allowed':
                 pyautogui.press('a')
@@ -1939,8 +1950,8 @@ def automate_settings(row, initial_x, initial_y):
                 time.sleep(1)        
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=32, interval=0.07)
-                pyautogui.press('a')
-                time.sleep(1)  # Assuming <up> to disallow
+                #pyautogui.press('a')
+                time.sleep(1)  
                 pass
         #Display Business Structure & Job Information in Hyperfind
         elif index == 215:
@@ -2055,7 +2066,7 @@ def automate_settings(row, initial_x, initial_y):
                 time.sleep(1)        
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=35, interval=0.07)
-                pyautogui.press('a')
+                #pyautogui.press('a')
                 time.sleep(1)  # Assuming <up> to disallow
                 pass
         #Assemble Query tab
@@ -2083,7 +2094,7 @@ def automate_settings(row, initial_x, initial_y):
                 time.sleep(1)        
                 mouse_click(initial_x, initial_y)  # Reset click position 
                 pyautogui.press('tab', presses=38, interval=0.07)
-                pyautogui.press('a')
+                #pyautogui.press('a')
                 time.sleep(1)  # Assuming <up> to disallow
                 pass
         #Ad hoc queries
@@ -2668,7 +2679,7 @@ def move_and_click(x, y, delay=0.7):
     time.sleep(delay)
 def mouse_click(x, y):
     pyautogui.click(x, y)    
-def tabto(count,initial_x=-1266, initial_y=-217):
+def tabto(count,initial_x=-4444, initial_y=-1676):                                                          
     mouse_click(initial_x, initial_y)
     pyautogui.press('tab', presses=count, interval=0.07)           
 # Function to press tab the required number of times and then either up+tab or down based on the setting
@@ -2700,7 +2711,10 @@ def tab_and_open(count):
     time.sleep(1)
 #End of The Kwiggler's Functions -------------------------------------------------------------------------------------------------------------------
 # Read settings.txt and apply settings
-
+# Function to write a message to the log file
+def log_message(message):
+    with open("automation_log.txt", "a") as f:
+        f.write(f"{message}\n")
 
 def main():
     with open('FAPPage2.txt', mode='r') as fap_file:
@@ -2710,18 +2724,20 @@ def main():
     with open('Page2.txt', mode='r') as settings_file:
         settings_reader = csv.reader(settings_file)
         headers = next(settings_reader)  # Skip the header row
+        time.sleep(0.7)
 
         for fap_name in fap_names:
             # Process actions based on the FAP name
-            #process_actions_for_fap(fap_name.strip())
+            process_actions_for_fap(fap_name.strip())
+            time.sleep(0.7)
 
             # Press Enter after processing actions
             pyautogui.press('enter')
             time.sleep(1)
 
-            # Process settings for the current FAP n    ame
+            # Process settings for the current FAP name
             print(f"Processing for FAP: {fap_name.strip()}")
-            initial_x, initial_y = -1266,-217  # Update these values to the initial click position
+            initial_x, initial_y = -4444,-1676  # Update these values to the initial click position
             settings_row = next(settings_reader)  # Get the corresponding settings row
             automate_settings(settings_row, initial_x, initial_y)
             time.sleep(3)  # Delay between processing each row
